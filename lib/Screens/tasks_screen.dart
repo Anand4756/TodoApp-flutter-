@@ -47,13 +47,30 @@ class TasksScreen extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20),
-                    )),
-              ),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                      )),
+                  child: ListView(
+                    children: [
+                      ListTile(
+                        title: Text('Study flutter state'),
+                        trailing: Checkbox(
+                          onChanged: (bool? value) {},
+                          value: true,
+                        ),
+                      ),
+                      ListTile(
+                        title: Text('Study flutter state'),
+                        trailing: Checkbox(
+                          onChanged: (bool? value) {},
+                          value: true,
+                        ),
+                      ),
+                    ],
+                  )),
             )
           ],
         ));
