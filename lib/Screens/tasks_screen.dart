@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lessdistraction/Screens/add_todo.dart';
+
+import 'package:lessdistraction/Widgets/tasks_list.dart';
 
 class TasksScreen extends StatelessWidget {
   @override
@@ -7,7 +10,8 @@ class TasksScreen extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.red[500],
           onPressed: () {
-            print("clicked");
+            showModalBottomSheet(
+                context: context, builder: (context) => AddTodo());
           },
           child: Icon(Icons.add),
         ),
@@ -47,30 +51,14 @@ class TasksScreen extends StatelessWidget {
             ),
             Expanded(
               child: Container(
+                  padding: EdgeInsets.only(left: 20.0, right: 20.0),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20),
                       )),
-                  child: ListView(
-                    children: [
-                      ListTile(
-                        title: Text('Study flutter state'),
-                        trailing: Checkbox(
-                          onChanged: (bool? value) {},
-                          value: true,
-                        ),
-                      ),
-                      ListTile(
-                        title: Text('Study flutter'),
-                        trailing: Checkbox(
-                            onChanged: (bool? value) {},
-                            value: true,
-                            activeColor: Colors.red),
-                      ),
-                    ],
-                  )),
+                  child: TasksList()),
             )
           ],
         ));
