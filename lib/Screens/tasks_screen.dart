@@ -63,11 +63,11 @@ class TasksScreen extends StatelessWidget {
                         ),
                       ),
                       ListTile(
-                        title: Text('Study flutter state'),
+                        title: Text('Study flutter'),
                         trailing: Checkbox(
-                          onChanged: (bool? value) {},
-                          value: true,
-                        ),
+                            onChanged: (bool? value) {},
+                            value: true,
+                            activeColor: Colors.red),
                       ),
                     ],
                   )),
