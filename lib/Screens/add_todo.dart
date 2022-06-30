@@ -12,24 +12,27 @@ class AddTodo extends StatelessWidget {
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
             )),
-        child: Column(
-          children: [
-            Text(
-              "Add Todo",
-              style: TextStyle(
-                color: Colors.white,
-                backgroundColor: Colors.red,
-                fontSize: 35.0,
+        child: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Column(
+            children: [
+              Text(
+                "Add Todo",
+                style: TextStyle(
+                  color: Colors.white,
+                  backgroundColor: Colors.red,
+                  fontSize: 35.0,
+                ),
               ),
-            ),
-            TextField(),
-            TextButton(
-                onPressed: () {},
-                child: Icon(
-                  Icons.check,
-                  size: 50.0,
-                ))
-          ],
+              TextField(),
+              TextButton(
+                  onPressed: () {},
+                  child: Icon(
+                    Icons.check,
+                    size: 50.0,
+                  ))
+            ],
+          ),
         ),
       ),
     );
