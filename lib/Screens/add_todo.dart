@@ -4,6 +4,7 @@ class AddTodo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: MediaQuery.of(context).size.height * 0.65,
       color: Color(0xff757575),
       child: Container(
         decoration: BoxDecoration(

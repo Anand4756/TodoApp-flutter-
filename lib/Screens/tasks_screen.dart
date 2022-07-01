@@ -10,8 +10,10 @@ class TasksScreen extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.red[500],
           onPressed: () {
-            showModalBottomSheet(
-                context: context, builder: (context) => AddTodo());
+            showModalBottomSheet<dynamic>(
+                isScrollControlled: true,
+                context: context,
+                builder: (context) => AddTodo());
           },
           child: Icon(Icons.add),
         ),

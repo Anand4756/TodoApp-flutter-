@@ -33,7 +33,7 @@ class TaskCheckbox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(checkboxstates);
+    // print(checkboxstates);
     return Checkbox(
       value: checkboxstates,
       onChanged: (newval) {
